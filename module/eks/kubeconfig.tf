@@ -3,8 +3,8 @@ locals {
 apiVersion: v1
 clusters:
 - cluster:
-    server: ${ aws_eks_cluster.simple.endpoint }
-    certificate-authority-data: ${ aws_eks_cluster.simple.certificate_authority.0.data }
+    server: ${aws_eks_cluster.simple.endpoint}
+    certificate-authority-data: ${aws_eks_cluster.simple.certificate_authority.0.data}
   name: kubernetes
 contexts:
 - context:
@@ -23,6 +23,6 @@ users:
       args:
         - "token"
         - "-i"
-        - "${ var.cluster_name }"
+        - "${var.cluster_name}"
   KUBECONFIGEOF
 }

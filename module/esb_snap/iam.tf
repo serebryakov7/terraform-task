@@ -10,6 +10,13 @@ resource "aws_iam_role" "lambda" {
       "Principal": {
         "Service": "lambda.amazonaws.com"
       },
+      "Effect": "Allow"
+    },
+    {
+      "Action": "sts:AssumeRole",
+      "Principal": {
+        "Service": "ec2.amazonaws.com"
+      },
       "Effect": "Allow",
       "Sid": ""
     }

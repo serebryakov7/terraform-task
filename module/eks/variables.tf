@@ -3,10 +3,6 @@ variable "vpc_id" {
 }
 
 variable "accessing_computer_ip" {
-    type = "string"
-}
-
-variable "keypair_name" {
   type = "string"
 }
 

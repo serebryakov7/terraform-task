@@ -5,7 +5,7 @@ output "eks_kubeconfig" {
   ]
 }
 
-output "node_sg_id" {
+output "node_sec_group_id" {
   value = aws_security_group.eks-node.id
 }
 

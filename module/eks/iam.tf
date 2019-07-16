@@ -19,12 +19,12 @@ POLICYEOF
 
 resource "aws_iam_role_policy_attachment" "cluster-EKSClusterPolicy" {
   policy_arn = "arn:aws:iam::aws:policy/AmazonEKSClusterPolicy"
-  role       = aws_iam_role.eks-master.name
+  role = aws_iam_role.eks-master.name
 }
 
 resource "aws_iam_role_policy_attachment" "cluster-EKSServicePolicy" {
   policy_arn = "arn:aws:iam::aws:policy/AmazonEKSServicePolicy"
-  role       = aws_iam_role.eks-master.name
+  role = aws_iam_role.eks-master.name
 }
 
 resource "aws_iam_role" "eks-node" {
