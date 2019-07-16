@@ -1,7 +1,7 @@
 resource "aws_iam_role" "lambda" {
   name = "iam_for_lambda"
 
-  assume_role_policy = << POLICYEOF
+  assume_role_policy = <<-POLICYEOF
 {
   "Version": "2012-10-17",
   "Statement": [
@@ -15,5 +15,5 @@ resource "aws_iam_role" "lambda" {
     }
   ]
 }
-POLICYEOF
+    POLICYEOF
 }

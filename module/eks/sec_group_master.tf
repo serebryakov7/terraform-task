@@ -1,7 +1,7 @@
 resource "aws_security_group" "eks-master" {
     name        = "eks-cluster"
     description = "Cluster communication with worker nodes"
-    vpc_id      = "${ var.vpc_id }"
+    vpc_id      = var.vpc_id
 
     egress {
         from_port   = 0
