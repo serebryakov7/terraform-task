@@ -40,10 +40,4 @@ resource "aws_autoscaling_group" "eks" {
   min_size = 1
   name = "eks"
   vpc_zone_identifier = var.cluster_subnet_ids
-
-  tag {
-    key = "EBSDailyBackup"
-    propagate_at_launch = false
-    value = "enabled"
-  }
 }
